@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3.payara-p6 (FISH-5811-df8dba8; 2021-12-02T15:42:59+0000) JAXWS-RI/2.3.2.payara-p4 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://banco.serv.web/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://banco.serv.web/">
+
+<xs:element name="Pagar" type="tns:Pagar"/>
+
+<xs:element name="PagarResponse" type="tns:PagarResponse"/>
+
+<xs:complexType name="Pagar">
+<xs:sequence>
+<xs:element name="Numero_Tarjeta" type="xs:int"/>
+<xs:element name="Monto" type="xs:int"/>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="CVV" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PagarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
